@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <h1>HOONG</h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">WORK</a></li>
+          <li><a href="#">ABILITY</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div id="wrap1">
+      <section id="introSection1" class="section__item bg__black">
+        <div class="container">
+          <h2 class="blind">인트로영역</h2>
+          <p>
+            Front-End <em>Dveloper</em><br>
+            <em>Creating</em> <em>Captivating</em><br>
+            <em>WEB</em> <em>Experience</em>
+          </p>
+          <svg width="1394" height="1668" viewBox="0 0 1394 1668" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M683.439 273.11V0C582.919 55.0013 342.051 185.487 182.737 267.42C23.4225 349.353 -5.02648 449.494 0.663317 489.322V762.432C156.184 678.982 489.986 498.426 581.023 443.804C672.059 389.182 687.232 307.249 683.439 273.11Z" fill="#111111"/>
+            <path d="M1018.47 500.702V0C1094.34 39.8286 1260.86 128.589 1320.03 165.004C1379.21 201.419 1394 267.42 1394 295.869V500.702V1388.31C1394 1438.38 1356.07 1469.86 1337.1 1479.35L1018.47 1661.42V898.988L369.837 1251.75V1667.11C280.697 1614.01 92.1747 1500.97 51.2082 1473.66C10.2416 1446.35 0 1390.21 0 1365.55V1160.72C0 1069.68 75.8639 1008.99 113.796 990.024L1018.47 500.702Z" fill="#111111"/>
+          </svg>            
+        </div>
+      </section>
+      <section id="introSection2" class="section__item bg__black">
+        <div class="container">
+          <h2 class="blind">인트로영역</h2>
+          <div class="spin__stick"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+  <script>
+    const lenis = new Lenis()
+    lenis.on('scroll', (e) => {
+        console.log(e)
+    })
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+
+    const backLogo = document.querySelector('#introSection1 svg')
+    const introDesc = document.querySelector('#introSection1 p')
+
+    gsap.to(introDesc, {
+      duration: 2,
+      opacity: 0,
+      y: -400,
+      scrollTrigger: {
+        trigger: introDesc,
+        scrub: 1,
+        start: '300px top',
+        end: 'bottom -1200px',
+        markers: false,
+      }
+    })
+    gsap.defaults({ease: 'none', duration: 2});
+        const introAni1 = gsap.timeline();
+        introAni1.set(backLogo, {opacity: 0.4})
+                  .to(backLogo, {x: -200, y: -800,rotation: 345, scale: 5, opacity:1})
+                  .to(backLogo, {x: -200, y: -1500,rotation: 375, scale: 5, opacity:1})
+        // introAni1.fromTo(backLogo, 
+        // {y:0, x:0, rotation: 0, scale: 1.2, opacity: 0.5},
+        // {y:-1000, x: -500, rotation: 360, scale: 5, opacity: 1},)
+                
+        ScrollTrigger.create({
+            animation: introAni1,
+            trigger: '#introSection1',
+            start: 'top top',
+            end: '+=3000',
+            scrub: 1,
+            pin: true,
+            anticipatePin: true,
+            markers: false,
+        });
+  </script>
+</body>
+</html>

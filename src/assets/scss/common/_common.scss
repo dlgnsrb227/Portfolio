@@ -1,0 +1,40 @@
+// bg
+.bg__black {
+    background-color: #000;
+}
+.bg__white {
+    background-color: #000;
+}
+// blind
+.blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+// ir
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+#main {
+    overflow: hidden;
+}
+// section
+.section__item {
+    width: 100vw;
+    height: 100vh;
+    // overflow: hidden;
+}
+// container
+.container {
+    width: calc(100vw - 100px);
+    margin: 0 auto;
+}
