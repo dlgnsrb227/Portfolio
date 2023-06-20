@@ -48,25 +48,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
   <script>
-    const lenis = new Lenis()
-    lenis.on('scroll', (e) => {
-        console.log(e)
-    })
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
-
     const backLogo = document.querySelector('#introSection1 svg')
     const introDesc = document.querySelector('#introSection1 p')
+    const spinStick = document.querySelector("#introSection2 .spin__stick")
 
     gsap.to(introDesc, {
       duration: 2,
       opacity: 0,
       y: -400,
       scrollTrigger: {
-        trigger: introDesc,
+        trigger: '#introSection1',
         scrub: 1,
         start: '300px top',
         end: 'bottom -1200px',
@@ -74,24 +65,54 @@
       }
     })
     gsap.defaults({ease: 'none', duration: 2});
-        const introAni1 = gsap.timeline();
-        introAni1.set(backLogo, {opacity: 0.4})
-                  .to(backLogo, {x: -200, y: -800,rotation: 345, scale: 5, opacity:1})
-                  .to(backLogo, {x: -200, y: -1500,rotation: 375, scale: 5, opacity:1})
-        // introAni1.fromTo(backLogo, 
-        // {y:0, x:0, rotation: 0, scale: 1.2, opacity: 0.5},
-        // {y:-1000, x: -500, rotation: 360, scale: 5, opacity: 1},)
-                
-        ScrollTrigger.create({
-            animation: introAni1,
-            trigger: '#introSection1',
-            start: 'top top',
-            end: '+=3000',
-            scrub: 1,
-            pin: true,
-            anticipatePin: true,
-            markers: false,
-        });
+    const introAni1 = gsap.timeline();
+    introAni1.set(backLogo, {opacity: 0.4})
+              .to(backLogo, {x: -200, y: -800,rotation: 345, scale: 5, opacity:1})
+              .to(backLogo, {x: -200, y: -1500,rotation: 375, scale: 5, opacity:1})
+              // introAni1.fromTo(backLogo, 
+              // {y:0, x:0, rotation: 0, scale: 1.2, opacity: 0.5},
+              // {y:-1000, x: -500, rotation: 360, scale: 5, opacity: 1},)
+
+    ScrollTrigger.create({
+      animation: introAni1,
+      trigger: '#introSection1',
+      start: 'top top',
+      end: '+=3000',
+      scrub: 1,
+      pin: true,
+      anticipatePin: true,
+      markers: false,
+    });
+
+    // gsap.to(spinStick, {
+    //   duration: 2,
+    //   opacity: 1,
+    //   scrollTrigger: {
+    //     trigger: '#introSection2',
+    //     scrub: 0.8,
+    //     pin : true,
+    //     anticipatePin: true,
+    //     start: 'top top',
+    //     end: '+=3000',
+    //     markers: true,
+    //   }
+    // })
+
+    gsap.defaults({ease: 'none', duration: 2});
+    const introAni2 = gsap.timeline();
+    introAni2.set(spinStick, {width: '0.5vw', opacity: 1})
+              .to(spinStick, {width: '2.4vw', height: '45vh', y: '-22vh', borderRadius: 30})
+              .to(spinStick, {rotationZ: 1440, transformOrigin: "50% 95%",})
+    ScrollTrigger.create({
+      animation: introAni2,
+      trigger: '#introSection2',
+      start: 'top top',
+      end: '+=3000',
+      scrub: 0.1,
+      pin: true,
+      anticipatePin: true,
+      markers: false,
+    });
   </script>
 </body>
 </html>

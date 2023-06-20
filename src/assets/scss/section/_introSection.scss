@@ -2,46 +2,45 @@
 #introSection1 {
     color: #fff;
     font-family: 'PP Mori';
-    display: flex;
-    align-items: center;
-    position: relative;
-    // overflow: hidden;
 
-    p {
-        font-size: 5.5vw;
-        font-weight: 100;
-        line-height: 1.1;
+    .container {
+        display: flex;
+        align-items: center;
 
-        em {
-            &:nth-child(1) {font-weight: 600;}
-            &:nth-child(3) {font-weight: 600;}
-            &:nth-child(4) {font-style: italic;}
-            &:nth-child(6) {font-weight: 600; font-style: italic;}
-            &:nth-child(7) {font-style: italic;}
+        p {
+            font-size: 5.5vw;
+            font-weight: 100;
+            line-height: 1.1;
+            
+            em {
+                &:nth-child(1) {font-weight: 600;}
+                &:nth-child(3) {font-weight: 600;}
+                &:nth-child(4) {font-style: italic;}
+                &:nth-child(6) {font-weight: 600; font-style: italic;}
+                &:nth-child(7) {font-style: italic;}
+            }
         }
-    }
-    svg {
-        right: 2vw;
-        position: absolute;
-        right: 3vw;
-        top: 11vw;
-        width: 50%;
+        svg {
+            position: absolute;
+            right: 3vw;
+            top: 11vw;
+            width: 50%;
+        }
     }
 }
 
 // introSection2
 #introSection2 {
-    position: relative;
     color: #fff;
     font-family: 'PP Mori';
 
-    .spin__stick {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 10px;
-        height: 100px;
-        background-color: #fff;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+   
+        .spin__stick {
+            background-color: #fff;
+        }
     }
 }
