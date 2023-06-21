@@ -44,11 +44,11 @@
             z-index: 10;
             background-color: #fff;
             &.active {
-                background-image: url(../../images/spin__image01.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-attachment: fixed;
+                // background-image: url(../../images/spin__image01.png);
+                // background-size: contain;
+                // background-repeat: no-repeat;
+                // background-position: center center;
+                // background-attachment: fixed;
             }
         }
         .spin__text {
@@ -72,6 +72,25 @@
                     color: #fff;
                     font-size: 1.4vw;
                 }
+            }
+        }
+        .spin__image {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -80%);
+            z-index: 100;
+            width: 300px;
+            height: 500px;
+            // background-image: url("../../images/spin__image01.png");
+            // background-position: center center;
+            // background-size: cover;
+            // background-repeat: no-repeat;
+
+            img {
+                object-fit: cover;
+                -webkit-mask-size: cover;
+                mask-size: cover;
             }
         }
     }
