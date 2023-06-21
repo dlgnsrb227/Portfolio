@@ -44,11 +44,11 @@
             z-index: 10;
             background-color: #fff;
             &.active {
-                // background-image: url(../../images/spin__image01.png);
-                // background-size: contain;
-                // background-repeat: no-repeat;
-                // background-position: center center;
-                // background-attachment: fixed;
+                background-image: url(./assets/images/spin__image01.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
             }
         }
         .spin__text {
