@@ -38,7 +38,15 @@
       <section id="introSection2" class="section__item bg__black">
         <div class="container">
           <h2 class="blind">인트로영역</h2>
-          <div class="spin__stick"></div>
+          <div class="spin__stick active"></div>
+          <div class="spin__text">
+            <span class="t1 active">want you to be <em>joyful</em></span>
+            <span class="t2">want to be with <em>all of you</em></span>
+            <span class="t3">want you to <em>contact me</em></span>
+          </div>
+          <div class="spin__image">
+            <!-- <img src="src/assets/images/spin__image01.png" alt="프로필이미지"> -->
+          </div>
         </div>
       </section>
     </div>
@@ -98,6 +106,10 @@
     //   }
     // })
 
+    const T1 = document.querySelector(".spin__text .t1")
+    const T2 = document.querySelector(".spin__text .t2")
+    const T3 = document.querySelector(".spin__text .t3")
+
     gsap.defaults({ease: 'none', duration: 2});
     const introAni2 = gsap.timeline();
     introAni2.set(spinStick, {width: '0.5vw', opacity: 1})
@@ -107,11 +119,35 @@
       animation: introAni2,
       trigger: '#introSection2',
       start: 'top top',
-      end: '+=3000',
-      scrub: 0.1,
+      end: '+=6000',
+      scrub: true,
       pin: true,
       anticipatePin: true,
       markers: false,
+      onUpdate: (self) => {
+        let progress = self.progress.toFixed(4)
+        console.log(progress)
+        if(progress > 0 && progress < 0.5933){
+          document.querySelectorAll(".spin__text span").forEach(e => {
+            e.classList.remove('active')
+          })
+          T1.classList.add('active')
+        } else if(progress > 0.5933 && progress < 0.7181){
+          document.querySelectorAll(".spin__text span").forEach(e => {
+            e.classList.remove('active')
+          })
+          T2.classList.add('active')
+        } else if (progress > 0.7181 && progress < 0.8433){
+          document.querySelectorAll(".spin__text span").forEach(e => {
+            e.classList.remove('active')
+          })
+          T3.classList.add('active')
+        } else if (progress > 0.8433){
+          document.querySelectorAll(".spin__text span").forEach(e => {
+            e.classList.remove('active')
+          })
+        }
+      }
     });
   </script>
 </body>

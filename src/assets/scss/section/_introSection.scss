@@ -40,7 +40,39 @@
         justify-content: center;
    
         .spin__stick {
+            position: relative;
+            z-index: 10;
             background-color: #fff;
+            &.active {
+                background-image: url(../../images/spin__image01.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+            }
+        }
+        .spin__text {
+            position: absolute;
+            left: 30%;
+            top: 46%;
+
+            span {
+                position: absolute;
+                width: 20vw;
+                display: inline-block;
+                font-size: 1.35vw;
+                font-weight: 300;
+                color: #aaa;
+                display: none;
+                &.active {
+                    display: block;
+                }
+
+                em {
+                    color: #fff;
+                    font-size: 1.4vw;
+                }
+            }
         }
     }
 }
