@@ -8,7 +8,6 @@
     flex-wrap: wrap;
     align-items: center;
     p {
-      color: #ffffff;
       font-size: 5.8vw;
       font-weight: 500;
       line-height: 1.1;
@@ -27,7 +26,6 @@
         }
       }
       span {
-        color: #ffffff;
         display: inline-block;
         line-height: 1.6;
         font-weight: 300;
@@ -52,5 +50,53 @@
     background-size: cover;
     background-position: center 0px;
     background-repeat: no-repeat;
+  }
+}
+
+#portSection3 {
+  color: #ffffff;
+  position: relative;
+
+  .container {
+    h3 {
+      letter-spacing: 6px;
+      font-weight: 100;
+      font-size: 5vw;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      em {
+        letter-spacing: 0px;
+        font-style: italic;
+        font-weight: 900;
+      }
+    }
+
+    .work__inner {
+      a {
+        position: relative;
+        display: inline-block;
+        img {
+          &:hover {
+            backdrop-filter: blur(8px);
+          }
+        }
+        span {
+          color: #000000;
+          font-weight: 900;
+          font-size: 4vw;
+          position: absolute;
+          right: -10.9vw;
+          top: 15vh;
+          em {
+            letter-spacing: 2px;
+            color: #ffffff;
+            font-weight: 300;
+            font-style: italic;
+          }
+        }
+      }
+    }
   }
 }
