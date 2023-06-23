@@ -23,7 +23,7 @@
       <div id="wrap1">
         <section id="introSection1" class="section__item bg__black">
           <div class="container">
-            <h2 class="blind">인트로영역</h2>
+            <h2 class="blind">인트로 첫 번째 영역</h2>
             <p>
               Front-End <em>Dveloper</em><br />
               <em>Creating</em> <em>Captivating</em><br />
@@ -49,7 +49,7 @@
         </section>
         <section id="introSection2" class="section__item bg__black">
           <div class="container">
-            <h2 class="blind">인트로영역</h2>
+            <h2 class="blind">인트로 두 번째 영역</h2>
             <div class="spin__stick"></div>
             <div class="spin__text">
               <span class="t1 active">want you to be <em>joyful</em></span>
@@ -69,11 +69,27 @@
           </div>
         </section>
         <section id="portSection1" class="section__item bg__black">
-          <h2 class="blind">포트폴리오영역</h2>
-          <p>
-            <em>Front-End</em> Developer<br />Creating <em>Captivating</em>
-            <em>Web</em>
-          </p>
+          <div class="container">
+            <h2 class="blind">포트폴리오 첫 번째 영역</h2>
+            <!-- <div class="color__box"></div> -->
+            <p>
+              <em>Front-End</em> Developer<br />Creating <em>Captivating</em>
+              <em>WEB</em>
+              <span class="nanum introment">
+                어떤 일이라도 끊임없이 <strong>노력</strong>하면 반드시 좋은
+                <strong>결과</strong>가 따라온다고 생각합니다.<br />
+                모든 시작에 대해 두려워하지 않고 <strong>도전</strong>하고
+                배움에 있어 열정과 겸손함을 유지하며<br />
+                세심하고 꼼꼼하게 파고드는 개발자가 되겠습니다.
+              </span>
+            </p>
+          </div>
+        </section>
+        <section id="portSection2" class="section__item__short bg__black">
+          <div class="container">
+            <h2 class="blind">포트폴리오 두 번째 영역</h2>
+            <div class="profile__img"></div>
+          </div>
         </section>
       </div>
     </main>
@@ -85,6 +101,12 @@
       const backLogo = document.querySelector("#introSection1 svg");
       const introDesc = document.querySelector("#introSection1 p");
       const spinStick = document.querySelector("#introSection2 .spin__stick");
+      const T1 = document.querySelector(".spin__text .t1");
+      const T2 = document.querySelector(".spin__text .t2");
+      const T3 = document.querySelector(".spin__text .t3");
+      const T4 = document.querySelector(".spin__text .t4");
+      const t4Text = document.querySelector(".spin__text .t4__text");
+      const introMent = document.querySelector(".introment");
 
       gsap.to(introDesc, {
         duration: 2,
@@ -124,12 +146,6 @@
         anticipatePin: true,
         markers: false,
       });
-
-      const T1 = document.querySelector(".spin__text .t1");
-      const T2 = document.querySelector(".spin__text .t2");
-      const T3 = document.querySelector(".spin__text .t3");
-      const T4 = document.querySelector(".spin__text .t4");
-      const t4Text = document.querySelector(".spin__text .t4__text");
 
       gsap.defaults({ ease: "none", duration: 2 });
       const introAni2 = gsap.timeline();
@@ -201,6 +217,24 @@
             spinStick.classList.remove("active");
           }
         },
+      });
+
+      gsap.defaults({ ease: "none", duration: 2 });
+      const portAni1 = gsap.timeline();
+      portAni1.set(introMent, { x: 100, opacity: 0 }).to(introMent, {
+        x: 0,
+        opacity: 1,
+      });
+
+      ScrollTrigger.create({
+        animation: portAni1,
+        trigger: "#portSection1",
+        start: "top top",
+        end: "+=2000",
+        scrub: 1,
+        pin: true,
+        anticipatePin: true,
+        markers: false,
       });
     </script>
   </body>

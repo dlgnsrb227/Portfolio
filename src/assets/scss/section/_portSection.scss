@@ -2,9 +2,55 @@
 #portSection1 {
   font-family: "PP Mori";
   color: #fff;
-  p {
-    font-size: 5.5vw;
-    font-weight: 100;
-    line-height: 1.1;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    p {
+      color: #ffffff;
+      font-size: 5.8vw;
+      font-weight: 500;
+      line-height: 1.1;
+      margin-top: 100px;
+      position: relative;
+
+      em {
+        font-weight: 100;
+
+        &:nth-child(3) {
+          font-style: italic;
+        }
+        &:nth-child(4) {
+          font-weight: 500;
+          font-style: italic;
+        }
+      }
+      span {
+        color: #ffffff;
+        display: inline-block;
+        line-height: 1.6;
+        font-weight: 300;
+        margin-top: 150px;
+        font-size: 1.1vw;
+
+        strong {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+#portSection2 {
+  .profile__img {
+    width: 25vw;
+    height: 25vw;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-image: url(./assets/images/profile__image01.png);
+    background-size: cover;
+    background-position: center 0px;
+    background-repeat: no-repeat;
   }
 }
