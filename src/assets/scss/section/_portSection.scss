@@ -113,9 +113,12 @@
           left: 15vw;
         }
         &.work__left2 {
-          left: 5vw;
+          left: 10vw;
         }
         &.work__left3 {
+          left: 25vw;
+        }
+        &.work__left4 {
           left: 25vw;
         }
         &.work__right1 {
@@ -127,6 +130,12 @@
             top: 30%;
             left: -8vw;
           }
+        }
+        &.work__right3 {
+          right: 20vw;
+        }
+        &.work__right4 {
+          right: 25vw;
         }
 
         img {

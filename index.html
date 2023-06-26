@@ -151,6 +151,39 @@
                   화면전환 효과를 만들었습니다.
                 </p>
               </a>
+              <a href="#l" class="work__right work__right3">
+                <img
+                  src="src/assets/images/webstandard__01.png"
+                  alt="웹표준코딩사이트 이미지"
+                />
+                <span>Web Standard <em>Site</em></span>
+                <p class="chosun">
+                  React를 사용하여 만든 사이트입니다.<br />
+                  웹표준을 준수하여 코딩했습니다.
+                </p>
+              </a>
+              <a href="#l" class="work__left work__left4">
+                <img
+                  src="src/assets/images/webstandard__02.png"
+                  alt="웹표준코딩사이트 이미지"
+                />
+                <span>Web Standard <em>Site</em></span>
+                <p class="chosun">
+                  Vue를 사용하여 만든 사이트입니다.<br />
+                  웹표준을 준수하여 코딩했습니다.
+                </p>
+              </a>
+              <a href="#l" class="work__right work__right4">
+                <img
+                  src="src/assets/images/webstandard__03.png"
+                  alt="웹표준코딩사이트 이미지"
+                />
+                <span>Web Standard <em>Site</em></span>
+                <p class="chosun">
+                  Next를 사용하여 만든 사이트입니다.<br />
+                  웹표준을 준수하여 코딩했습니다.
+                </p>
+              </a>
             </div>
           </div>
         </section>
@@ -305,21 +338,31 @@
       const portAni2 = gsap.timeline();
       portAni2
         .set(workImg, { y: "100vh" })
-        .to(workImg[0], { y: "-100vh" })
-        .to(workImg[1], { y: "-100vh" })
-        .to(workImg[2], { y: "-100vh" })
-        .to(workImg[3], { y: "-100vh" })
-        .to(workImg[4], { y: "-100vh" });
+        .to(workImg[0], { y: "-100vh", paddingBottom: "30vh" })
+        .to(workImg[1], { y: "-100vh", paddingBottom: "30vh" })
+        .to(workImg[2], { y: "-100vh", paddingBottom: "30vh" })
+        .to(workImg[3], { y: "-100vh", paddingBottom: "30vh" })
+        .to(workImg[4], { y: "-100vh", paddingBottom: "30vh" })
+        .to(workImg[5], { y: "-100vh", paddingBottom: "30vh" })
+        .to(workImg[6], { y: "-100vh", paddingBottom: "30vh" })
+        .to(workImg[7], { y: "-100vh", paddingBottom: "30vh" });
 
       ScrollTrigger.create({
         animation: portAni2,
         trigger: "#portSection3",
         start: "top top",
-        end: "+=5000",
+        end: "+=8000",
         scrub: 1,
         pin: true,
         // anticipatePin: true,
         markers: false,
+        // onUpdate: (self) => {
+        //   let progress = self.progress.toFixed(3);
+        //   console.log("onUpdate", self.progress.toFixed(3));
+        //   if(progress < 0.653 && progress > 0){
+        //     document.querySelector("#portSection3").classList
+        //   }
+        // },
       });
     </script>
   </body>
