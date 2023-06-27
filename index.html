@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="shortcut icon" href="./assets/images/H_logo02.svg" />
   </head>
   <body>
     <header id="header">
@@ -203,28 +204,28 @@
             </div>
           </div>
         </section>
-      </div>
-      <main id="horizontality">
-        <section id="abilitySection1" class="section__item bg__white">
-          <div class="container">
-            <h3>By<em>ScriptCoding</em></h3>
-            <div class="ability__inner">
-              <span>Photoshop</span>
-              <span>illustrator</span>
-              <span>Figma</span>
-              <span>Html</span>
-              <span>CSS</span>
-              <span>SASS</span>
-              <span>Javascript</span>
-              <span>jQuery</span>
-              <span>React</span>
-              <span>Vue</span>
-              <span>Vite</span>
-              <span>Next</span>
+        <main id="horizontality">
+          <section id="abilitySection1" class="section__item bg__white">
+            <div class="container">
+              <h3>By<em>ScriptCoding</em></h3>
+              <div class="ability__inner">
+                <span>Photoshop</span>
+                <span>illustrator</span>
+                <span>Figma</span>
+                <span>Html</span>
+                <span>CSS</span>
+                <span>SASS</span>
+                <span>Javascript</span>
+                <span>jQuery</span>
+                <span>React</span>
+                <span>Vue</span>
+                <span>Vite</span>
+                <span>Next</span>
+              </div>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
+      </div>
     </main>
     <script type="module" src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
@@ -321,7 +322,7 @@
         markers: false,
         onUpdate: (self) => {
           let progress = self.progress.toFixed(4);
-          console.log(progress);
+          // console.log(progress);
           if (progress > 0 && progress < 0.2398) {
             document.querySelectorAll(".spin__text span").forEach((e) => {
               e.classList.remove("active");
@@ -434,11 +435,11 @@
 
       gsap.to("#abilitySection1", {
         ease: "none",
-        x: "-500vw",
+        // x: "-500vw",
         scrollTrigger: {
-          trigger: horizon,
+          trigger: "#horizontality",
           start: "top top",
-          end: "+=500vw",
+          end: "bottom bottom",
           pin: true,
           scrub: 1,
         },
