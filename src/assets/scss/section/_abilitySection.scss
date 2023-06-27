@@ -1,0 +1,41 @@
+#horizontality {
+  width: 500vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: -100vh;
+  display: none;
+  #abilitySection1 {
+    font-family: "PP Mori";
+    position: relative;
+    .container {
+      h3 {
+        letter-spacing: 6px;
+        font-weight: 100;
+        font-size: 5vw;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        em {
+          letter-spacing: 0px;
+          font-style: italic;
+          font-weight: 900;
+        }
+      }
+      .ability__inner {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translateY(-50%);
+        span {
+          display: inline-block;
+          padding: 0 3vw;
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+}

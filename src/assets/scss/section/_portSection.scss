@@ -57,7 +57,7 @@
   font-family: "PP Mori";
   color: #ffffff;
   position: relative;
-  transition: all 0.5s;
+  transition: filter, background 0.5s;
 
   .container {
     display: flex;
@@ -69,6 +69,7 @@
       position: absolute;
       left: 50%;
       top: 50%;
+      transition: all 0.5s;
       transform: translate(-50%, -50%);
       em {
         letter-spacing: 0px;
@@ -85,29 +86,20 @@
         position: absolute;
 
         span {
-          font-size: 3.5vw;
-          position: absolute;
+          display: inline-block;
+          margin-top: 10px;
+          font-size: 2.5vw;
+          color: #ffffff;
+          font-weight: 300;
         }
-        &.work__left {
-          span {
-            color: #000;
-            top: 60%;
-            right: -10.7vw;
-            text-shadow: 0 0 2px #eee;
-            em {
-              text-shadow: none;
-              color: #fff;
-            }
-          }
-        }
-        &.work__right {
-          span {
-            color: #fff;
-            top: 40%;
-            left: -14vw;
-            em {
-              color: #000;
-            }
+        p {
+          color: #ccc;
+          font-size: 1vw;
+          opacity: 0;
+          transition: all 0.3s;
+
+          &.active {
+            opacity: 1;
           }
         }
         &.work__left1 {
@@ -121,33 +113,50 @@
         }
         &.work__left4 {
           left: 25vw;
+          span {
+            color: #000000;
+          }
+          p {
+            color: #000000;
+          }
         }
         &.work__right1 {
           right: 20vw;
         }
         &.work__right2 {
           right: 10vw;
-          span {
-            top: 30%;
-            left: -8vw;
-          }
         }
         &.work__right3 {
           right: 20vw;
+          span {
+            color: #000000;
+          }
+          p {
+            color: #000000;
+          }
         }
         &.work__right4 {
           right: 25vw;
+          span {
+            color: #000000;
+          }
+          p {
+            color: #000000;
+          }
         }
-
-        img {
+        .img__box {
           width: 25vw;
-          position: relative;
-        }
+          overflow: hidden;
+          border-radius: 20px;
+          img {
+            width: 100%;
+            position: relative;
+            transition: all 0.5s;
 
-        p {
-          margin-top: 10px;
-          color: #ccc;
-          font-size: 20px;
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
         }
       }
     }
