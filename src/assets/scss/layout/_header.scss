@@ -5,6 +5,7 @@
   height: 90px;
   font-family: "Bebas Neue", sans-serif;
   mix-blend-mode: difference;
+  transition: transform 0.5s;
 
   .container {
     height: inherit;

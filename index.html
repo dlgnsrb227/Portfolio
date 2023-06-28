@@ -230,89 +230,13 @@
             <div class="left__side">
               <span class="skew__eff"><em>Hoong's</em>Awesome Work.</span>
             </div>
-            <div class="right__side">
-              <div class="works__list">
-                <ul>
-                  <li>
-                    <strong>Works 1</strong><span>Make blog with PHP</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                  <li>
-                    <strong>Works 2</strong><span>Make Website with PHP</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                  <li>
-                    <strong>Works 3</strong><span>Make login with AJAX</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                  <li>
-                    <strong>Works 4</strong><span>Make blog with PHP</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                  <li>
-                    <strong>Works 5</strong><span>Make Website with PHP</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                  <li>
-                    <strong>Works 6</strong><span>Make login with AJAX</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                  <li>
-                    <strong>Works 7</strong><span>Make blog with PHP</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                  <li>
-                    <strong>Works 8</strong><span>Make blog with PHP</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                  <li>
-                    <strong>Works 9</strong><span>Make blog with PHP</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                  <li>
-                    <strong>Works 10</strong><span>Make blog with PHP</span>
-                    <div>
-                      <a href="#"><em>view </em>blog</a
-                      ><a href="#"><em>view </em>source</a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </section>
       </main>
-      <section id="tempSection1" class="section__item bg__black">
+      <section id="workSection1" class="section__item bg__black">
         <div class="container">
           <div class="left__side">
-            <span class="skew__eff"><em>Hoong's</em>Awesome Work.</span>
+            <span><em>Hoong's</em>Awesome Work.</span>
           </div>
           <div class="right__side">
             <div class="works__list">
@@ -392,6 +316,7 @@
           </div>
         </div>
       </section>
+      <section id="workSection2" class="section__item bg__white"></section>
     </main>
     <script type="module" src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
@@ -608,7 +533,7 @@
           start: "top top",
           end: () => "+=" + (horizon.offsetWidth - innerWidth),
           pin: true,
-          scrub: 1,
+          scrub: 0.1,
           onUpdate: (self) => {
             let progress = self.progress.toFixed(3);
             // console.log(progress);
@@ -634,10 +559,10 @@
             }
           },
           onLeave: () => {
-            document.querySelector("#tempSection1").style.opacity = "1";
+            document.querySelector("#workSection1").style.opacity = "1";
           },
           onEnterBack: () => {
-            document.querySelector("#tempSection1").style.opacity = "0";
+            document.querySelector("#workSection1").style.opacity = "0";
           },
         },
       });
@@ -660,8 +585,38 @@
         },
       });
 
-      const workLeft = document.querySelector("#abilitySection3 .left__side");
-      const workRight = document.querySelector("#abilitySection3 .right__side");
+      const workRight = document.querySelector("#workSection1 .right__side");
+      const workLeft = document.querySelector("#workSection1 .left__side span");
+      const workAni1 = gsap.timeline();
+      workAni1
+        .set(workRight, { y: "120vh", opacity: "0.8" })
+        .to(workRight, { y: "-150vh", opacity: "1" });
+
+      ScrollTrigger.create({
+        animation: workAni1,
+        ease: "none",
+        trigger: "#workSection1",
+        start: "top top",
+        end: "+=2000",
+        pin: "#workSection1",
+        anticipatePin: true,
+        scrub: 1,
+        markers: false,
+        onEnter: () => {
+          document.querySelector("#header").style.transform =
+            "translateY(-100px)";
+        },
+        onEnterBack: () => {
+          document.querySelector("#header").style.transform =
+            "translateY(-100px)";
+        },
+        onLeave: () => {
+          document.querySelector("#header").style.transform = "translateY(0px)";
+        },
+        onLeaveBack: () => {
+          document.querySelector("#header").style.transform = "translateY(0px)";
+        },
+      });
     </script>
   </body>
 </html>
