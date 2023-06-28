@@ -206,29 +206,29 @@
       <main id="horizontality">
         <section id="abilitySection1" class="section__item bg__white">
           <div class="container">
-            <h3>My<em>Skills</em></h3>
+            <h3>By<em>ScriptCoding</em></h3>
           </div>
         </section>
         <section id="abilitySection2" class="section__item bg__white">
           <div class="ability__inner">
-            <span>Photoshop</span>
-            <span>illustrator</span>
-            <span>Figma</span>
-            <span>Html</span>
-            <span>CSS</span>
-            <span>SASS</span>
-            <span>Javascript</span>
-            <span>jQuery</span>
-            <span>React</span>
-            <span>Vue</span>
-            <span>Vite</span>
-            <span>Next</span>
+            <span class="skew__eff">Photoshop</span>
+            <span class="skew__eff">illustrator</span>
+            <span class="skew__eff">Figma</span>
+            <span class="skew__eff">Html</span>
+            <span class="skew__eff">CSS</span>
+            <span class="skew__eff">SASS</span>
+            <span class="skew__eff">Javascript</span>
+            <span class="skew__eff">jQuery</span>
+            <span class="skew__eff">React</span>
+            <span class="skew__eff">Vue</span>
+            <span class="skew__eff">Vite</span>
+            <span class="skew__eff">Next</span>
           </div>
         </section>
         <section id="abilitySection3" class="section__item bg__black">
           <div class="container">
             <div class="left__side">
-              <span><em>Hoong's</em>Awesome Work.</span>
+              <span class="skew__eff"><em>Hoong's</em>Awesome Work.</span>
             </div>
             <div class="right__side">
               <div class="works__list">
@@ -309,11 +309,94 @@
           </div>
         </section>
       </main>
+      <section id="tempSection1" class="section__item bg__black">
+        <div class="container">
+          <div class="left__side">
+            <span class="skew__eff"><em>Hoong's</em>Awesome Work.</span>
+          </div>
+          <div class="right__side">
+            <div class="works__list">
+              <ul>
+                <li>
+                  <strong>Works 1</strong><span>Make blog with PHP</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Works 2</strong><span>Make Website with PHP</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Works 3</strong><span>Make login with AJAX</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Works 4</strong><span>Make blog with PHP</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Works 5</strong><span>Make Website with PHP</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Works 6</strong><span>Make login with AJAX</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Works 7</strong><span>Make blog with PHP</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Works 8</strong><span>Make blog with PHP</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Works 9</strong><span>Make blog with PHP</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+                <li>
+                  <strong>Works 10</strong><span>Make blog with PHP</span>
+                  <div>
+                    <a href="#"><em>view </em>blog</a
+                    ><a href="#"><em>view </em>source</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script type="module" src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.1/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
     <script>
       const backLogo = document.querySelector("#introSection1 svg");
       const introDesc = document.querySelector("#introSection1 p");
@@ -325,7 +408,7 @@
       const t4Text = document.querySelector(".spin__text .t4__text");
       const introMent = document.querySelector(".introment");
       const workImg = document.querySelectorAll(".work__inner a");
-      const abilitySpan = document.querySelectorAll(".ability__inner span");
+      const abilitySpan = document.querySelectorAll(".skew__eff");
 
       gsap.to(introDesc, {
         duration: 2,
@@ -478,7 +561,7 @@
         scrub: 1,
         pin: true,
         // anticipatePin: true,
-        markers: true,
+        markers: false,
         onUpdate: (self) => {
           let progress = self.progress.toFixed(3);
           // console.log("onUpdate", self.progress.toFixed(3));
@@ -506,12 +589,12 @@
             });
           });
         },
-        // onEnterBack: () => {
-        //   document.querySelector("#horizontality").style.display = "none";
-        // },
-        // onLeave: () => {
-        //   document.querySelector("#horizontality").style.display = "flex";
-        // },
+        onLeave: () => {
+          document.querySelector("#horizontality").style.opacity = "1";
+        },
+        onEnterBack: () => {
+          document.querySelector("#horizontality").style.opacity = "0";
+        },
       });
 
       const horizon = document.querySelector("#horizontality");
@@ -519,7 +602,7 @@
 
       gsap.to(sections, {
         ease: "none",
-        x: "-400vw",
+        x: "-400.1vw",
         scrollTrigger: {
           trigger: "#horizontality",
           start: "top top",
@@ -528,7 +611,7 @@
           scrub: 1,
           onUpdate: (self) => {
             let progress = self.progress.toFixed(3);
-            console.log(progress);
+            // console.log(progress);
             if (progress > 0.5) {
               document
                 .querySelector("#abilitySection2")
@@ -549,6 +632,12 @@
               document.querySelector("#horizontality").style.backgroundColor =
                 "#ffffff";
             }
+          },
+          onLeave: () => {
+            document.querySelector("#tempSection1").style.opacity = "1";
+          },
+          onEnterBack: () => {
+            document.querySelector("#tempSection1").style.opacity = "0";
           },
         },
       });
@@ -571,23 +660,8 @@
         },
       });
 
-      const workList = document.querySelector("#abilitySection3 .right__side");
-      gsap.defaults({ ease: "none", duration: 2 });
-      const portAni3 = gsap.timeline();
-      portAni3
-        .set(workList, { y: "100vh", opacity: 0.3 })
-        .to(workList, { y: 0, opacity: 1 });
-
-      ScrollTrigger.create({
-        animation: portAni3,
-        trigger: "#abilitySection3",
-        start: "top top",
-        end: "+=2000",
-        scrub: 1,
-        pin: true,
-        // anticipatePin: true,
-        markers: false,
-      });
+      const workLeft = document.querySelector("#abilitySection3 .left__side");
+      const workRight = document.querySelector("#abilitySection3 .right__side");
     </script>
   </body>
 </html>
