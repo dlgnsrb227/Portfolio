@@ -6,7 +6,7 @@
     <title>Portfolio</title>
     <link rel="shortcut icon" href="./assets/images/H_logo02.svg" />
   </head>
-  <body>
+  <body class="scrollBar">
     <header id="header">
       <div class="container">
         <h1>HOONG</h1>
@@ -21,211 +21,294 @@
       </div>
     </header>
     <main id="main">
-      <div id="wrap1">
-        <section id="introSection1" class="section__item bg__black">
+      <section id="introSection1" class="section__item bg__black">
+        <div class="container">
+          <h2 class="blind">인트로 첫 번째 영역</h2>
+          <p>
+            Front-End <em>Dveloper</em><br />
+            <em>Creating</em> <em>Captivating</em><br />
+            <em>WEB</em> <em>Experience</em>
+          </p>
+          <svg
+            width="1394"
+            height="1668"
+            viewBox="0 0 1394 1668"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M683.439 273.11V0C582.919 55.0013 342.051 185.487 182.737 267.42C23.4225 349.353 -5.02648 449.494 0.663317 489.322V762.432C156.184 678.982 489.986 498.426 581.023 443.804C672.059 389.182 687.232 307.249 683.439 273.11Z"
+              fill="#666666"
+            />
+            <path
+              d="M1018.47 500.702V0C1094.34 39.8286 1260.86 128.589 1320.03 165.004C1379.21 201.419 1394 267.42 1394 295.869V500.702V1388.31C1394 1438.38 1356.07 1469.86 1337.1 1479.35L1018.47 1661.42V898.988L369.837 1251.75V1667.11C280.697 1614.01 92.1747 1500.97 51.2082 1473.66C10.2416 1446.35 0 1390.21 0 1365.55V1160.72C0 1069.68 75.8639 1008.99 113.796 990.024L1018.47 500.702Z"
+              fill="#666666"
+            />
+          </svg>
+        </div>
+      </section>
+      <section id="introSection2" class="section__item bg__black">
+        <div class="container">
+          <h2 class="blind">인트로 두 번째 영역</h2>
+          <div class="spin__stick"></div>
+          <div class="spin__text">
+            <span class="t1 active">want you to be <em>joyful</em></span>
+            <span class="t2">want to be with <em>all of you</em></span>
+            <span class="t3">want you to <em>contact me</em></span>
+            <span class="t4">want you to <em>meet Hoong</em></span>
+            <span class="t4__text chosun">
+              안녕하세요 <em>프론트엔드</em> 개발자를 꿈꾸는
+              <em>이훈규</em>입니다.<br />
+              부족한 부분은 끊임없이 <em>공부</em>하고 배우며<br />
+              항상 <em>최고</em>가 되기위해 노력합니다.
+            </span>
+          </div>
+          <div class="spin__image">
+            <!-- <img src="src/assets/images/spin__image01.png" alt="프로필이미지"> -->
+          </div>
+        </div>
+      </section>
+      <section id="portSection1" class="section__item bg__black">
+        <div class="container">
+          <h2 class="blind">포트폴리오 첫 번째 영역</h2>
+          <!-- <div class="color__box"></div> -->
+          <p>
+            <em>Front-End</em> Developer<br />Creating <em>Captivating</em>
+            <em>WEB</em>
+            <span class="chosun introment">
+              어떤 일이라도 끊임없이 <strong>노력</strong>하면 반드시 좋은
+              <strong>결과</strong>가 따라온다고 생각합니다.<br />
+              모든 시작에 대해 두려워하지 않고 <strong>도전</strong>하고 배움에
+              있어 열정과 겸손함을 유지하며<br />
+              세심하고 꼼꼼하게 파고드는 개발자가 되겠습니다.
+            </span>
+          </p>
+        </div>
+      </section>
+      <section id="portSection2" class="section__item__short bg__black">
+        <div class="container">
+          <h2 class="blind">포트폴리오 두 번째 영역</h2>
+          <div class="profile__img"></div>
+        </div>
+      </section>
+      <section id="portSection3" class="section__item bg__black">
+        <h2 class="blind">포트폴리오 세 번째 영역</h2>
+        <div class="container">
+          <h3>By<em>ScriptCoding</em></h3>
+          <div class="work__inner">
+            <a href="#l" class="work__left work__left1">
+              <div class="img__box">
+                <img
+                  src="src/assets/images/mouseEffect01.png"
+                  alt="마우스이펙트 이미지"
+                />
+              </div>
+              <span>Mouse <em>Effect</em></span>
+              <p class="chosun">
+                Javascript & gsap를 사용하여 마우스의 움직임에 따른<br />효과를
+                만들었습니다.
+              </p>
+            </a>
+            <a href="#l" class="work__right work__right1">
+              <div class="img__box">
+                <img
+                  src="src/assets/images/parallaxEffect01.png"
+                  alt="패럴랙스이펙트 이미지"
+                />
+              </div>
+              <span>Parallax <em>Effect</em></span>
+              <p class="chosun">
+                Javascript & gsap를 이용하여 스크롤에 따른<br />효과를
+                만들었습니다.
+              </p>
+            </a>
+            <a href="#l" class="work__left work__left2">
+              <div class="img__box">
+                <img
+                  src="src/assets/images/gameEffect01.png"
+                  alt="게임이펙트 이미지"
+                />
+              </div>
+              <span>Game <em>Effect</em></span>
+              <p class="chosun">
+                Javascript를 사용하여 뮤직플레이어, 게임플레이어<br />
+                효과를 만들었습니다.
+              </p>
+            </a>
+            <a href="#l" class="work__right work__right2">
+              <div class="img__box">
+                <img
+                  src="src/assets/images/quizEffect01.png"
+                  alt="퀴즈이펙트 이미지"
+                />
+              </div>
+              <span>Quiz <em>Effect</em></span>
+              <p class="chosun">
+                Javascript를 사용하여 주관식, 객관식, CBT형식의<br />
+                퀴즈효과를 만들었습니다.
+              </p>
+            </a>
+            <a href="#l" class="work__left work__left3">
+              <div class="img__box">
+                <img
+                  src="src/assets/images/slideEffect01.png"
+                  alt="슬라이드이펙트 이미지"
+                />
+              </div>
+              <span>Slide <em>Effect</em></span>
+              <p class="chosun">
+                Javascript & jQuery를 사용하여 좌, 우, fade, 썸네일 방식의<br />
+                화면전환 효과를 만들었습니다.
+              </p>
+            </a>
+            <a href="#l" class="work__right work__right3">
+              <div class="img__box">
+                <img
+                  src="src/assets/images/webstandard__01.png"
+                  alt="웹표준코딩사이트 이미지"
+                />
+              </div>
+              <span>Web Standard <em>Site</em></span>
+              <p class="chosun">
+                React를 사용하여 만든 사이트입니다.<br />
+                웹표준을 준수하여 코딩했습니다.
+              </p>
+            </a>
+            <a href="#l" class="work__left work__left4">
+              <div class="img__box">
+                <img
+                  src="src/assets/images/webstandard__02.png"
+                  alt="웹표준코딩사이트 이미지"
+                />
+              </div>
+              <span>Web Standard <em>Site</em></span>
+              <p class="chosun">
+                Vue를 사용하여 만든 사이트입니다.<br />
+                웹표준을 준수하여 코딩했습니다.
+              </p>
+            </a>
+            <a href="#l" class="work__right work__right4">
+              <div class="img__box">
+                <img
+                  src="src/assets/images/webstandard__03.png"
+                  alt="웹표준코딩사이트 이미지"
+                />
+              </div>
+              <span>Web Standard <em>Site</em></span>
+              <p class="chosun">
+                Next를 사용하여 만든 사이트입니다.<br />
+                웹표준을 준수하여 코딩했습니다.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <main id="horizontality">
+        <section id="abilitySection1" class="section__item bg__white">
           <div class="container">
-            <h2 class="blind">인트로 첫 번째 영역</h2>
-            <p>
-              Front-End <em>Dveloper</em><br />
-              <em>Creating</em> <em>Captivating</em><br />
-              <em>WEB</em> <em>Experience</em>
-            </p>
-            <svg
-              width="1394"
-              height="1668"
-              viewBox="0 0 1394 1668"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M683.439 273.11V0C582.919 55.0013 342.051 185.487 182.737 267.42C23.4225 349.353 -5.02648 449.494 0.663317 489.322V762.432C156.184 678.982 489.986 498.426 581.023 443.804C672.059 389.182 687.232 307.249 683.439 273.11Z"
-                fill="#666666"
-              />
-              <path
-                d="M1018.47 500.702V0C1094.34 39.8286 1260.86 128.589 1320.03 165.004C1379.21 201.419 1394 267.42 1394 295.869V500.702V1388.31C1394 1438.38 1356.07 1469.86 1337.1 1479.35L1018.47 1661.42V898.988L369.837 1251.75V1667.11C280.697 1614.01 92.1747 1500.97 51.2082 1473.66C10.2416 1446.35 0 1390.21 0 1365.55V1160.72C0 1069.68 75.8639 1008.99 113.796 990.024L1018.47 500.702Z"
-                fill="#666666"
-              />
-            </svg>
+            <h3>My<em>Skills</em></h3>
           </div>
         </section>
-        <section id="introSection2" class="section__item bg__black">
+        <section id="abilitySection2" class="section__item bg__white">
+          <div class="ability__inner">
+            <span>Photoshop</span>
+            <span>illustrator</span>
+            <span>Figma</span>
+            <span>Html</span>
+            <span>CSS</span>
+            <span>SASS</span>
+            <span>Javascript</span>
+            <span>jQuery</span>
+            <span>React</span>
+            <span>Vue</span>
+            <span>Vite</span>
+            <span>Next</span>
+          </div>
+        </section>
+        <section id="abilitySection3" class="section__item bg__black">
           <div class="container">
-            <h2 class="blind">인트로 두 번째 영역</h2>
-            <div class="spin__stick"></div>
-            <div class="spin__text">
-              <span class="t1 active">want you to be <em>joyful</em></span>
-              <span class="t2">want to be with <em>all of you</em></span>
-              <span class="t3">want you to <em>contact me</em></span>
-              <span class="t4">want you to <em>meet Hoong</em></span>
-              <span class="t4__text chosun">
-                안녕하세요 <em>프론트엔드</em> 개발자를 꿈꾸는
-                <em>이훈규</em>입니다.<br />
-                부족한 부분은 끊임없이 <em>공부</em>하고 배우며<br />
-                항상 <em>최고</em>가 되기위해 노력합니다.
-              </span>
+            <div class="left__side">
+              <span><em>Hoong's</em>Awesome Work.</span>
             </div>
-            <div class="spin__image">
-              <!-- <img src="src/assets/images/spin__image01.png" alt="프로필이미지"> -->
-            </div>
-          </div>
-        </section>
-        <section id="portSection1" class="section__item bg__black">
-          <div class="container">
-            <h2 class="blind">포트폴리오 첫 번째 영역</h2>
-            <!-- <div class="color__box"></div> -->
-            <p>
-              <em>Front-End</em> Developer<br />Creating <em>Captivating</em>
-              <em>WEB</em>
-              <span class="chosun introment">
-                어떤 일이라도 끊임없이 <strong>노력</strong>하면 반드시 좋은
-                <strong>결과</strong>가 따라온다고 생각합니다.<br />
-                모든 시작에 대해 두려워하지 않고 <strong>도전</strong>하고
-                배움에 있어 열정과 겸손함을 유지하며<br />
-                세심하고 꼼꼼하게 파고드는 개발자가 되겠습니다.
-              </span>
-            </p>
-          </div>
-        </section>
-        <section id="portSection2" class="section__item__short bg__black">
-          <div class="container">
-            <h2 class="blind">포트폴리오 두 번째 영역</h2>
-            <div class="profile__img"></div>
-          </div>
-        </section>
-        <section id="portSection3" class="section__item bg__black">
-          <h2 class="blind">포트폴리오 세 번째 영역</h2>
-          <div class="container">
-            <h3>By<em>ScriptCoding</em></h3>
-            <div class="work__inner">
-              <a href="#l" class="work__left work__left1">
-                <div class="img__box">
-                  <img
-                    src="src/assets/images/mouseEffect01.png"
-                    alt="마우스이펙트 이미지"
-                  />
-                </div>
-                <span>Mouse <em>Effect</em></span>
-                <p class="chosun">
-                  Javascript & gsap를 사용하여 마우스의 움직임에 따른<br />효과를
-                  만들었습니다.
-                </p>
-              </a>
-              <a href="#l" class="work__right work__right1">
-                <div class="img__box">
-                  <img
-                    src="src/assets/images/parallaxEffect01.png"
-                    alt="패럴랙스이펙트 이미지"
-                  />
-                </div>
-                <span>Parallax <em>Effect</em></span>
-                <p class="chosun">
-                  Javascript & gsap를 이용하여 스크롤에 따른<br />효과를
-                  만들었습니다.
-                </p>
-              </a>
-              <a href="#l" class="work__left work__left2">
-                <div class="img__box">
-                  <img
-                    src="src/assets/images/gameEffect01.png"
-                    alt="게임이펙트 이미지"
-                  />
-                </div>
-                <span>Game <em>Effect</em></span>
-                <p class="chosun">
-                  Javascript를 사용하여 뮤직플레이어, 게임플레이어<br />
-                  효과를 만들었습니다.
-                </p>
-              </a>
-              <a href="#l" class="work__right work__right2">
-                <div class="img__box">
-                  <img
-                    src="src/assets/images/quizEffect01.png"
-                    alt="퀴즈이펙트 이미지"
-                  />
-                </div>
-                <span>Quiz <em>Effect</em></span>
-                <p class="chosun">
-                  Javascript를 사용하여 주관식, 객관식, CBT형식의<br />
-                  퀴즈효과를 만들었습니다.
-                </p>
-              </a>
-              <a href="#l" class="work__left work__left3">
-                <div class="img__box">
-                  <img
-                    src="src/assets/images/slideEffect01.png"
-                    alt="슬라이드이펙트 이미지"
-                  />
-                </div>
-                <span>Slide <em>Effect</em></span>
-                <p class="chosun">
-                  Javascript & jQuery를 사용하여 좌, 우, fade, 썸네일 방식의<br />
-                  화면전환 효과를 만들었습니다.
-                </p>
-              </a>
-              <a href="#l" class="work__right work__right3">
-                <div class="img__box">
-                  <img
-                    src="src/assets/images/webstandard__01.png"
-                    alt="웹표준코딩사이트 이미지"
-                  />
-                </div>
-                <span>Web Standard <em>Site</em></span>
-                <p class="chosun">
-                  React를 사용하여 만든 사이트입니다.<br />
-                  웹표준을 준수하여 코딩했습니다.
-                </p>
-              </a>
-              <a href="#l" class="work__left work__left4">
-                <div class="img__box">
-                  <img
-                    src="src/assets/images/webstandard__02.png"
-                    alt="웹표준코딩사이트 이미지"
-                  />
-                </div>
-                <span>Web Standard <em>Site</em></span>
-                <p class="chosun">
-                  Vue를 사용하여 만든 사이트입니다.<br />
-                  웹표준을 준수하여 코딩했습니다.
-                </p>
-              </a>
-              <a href="#l" class="work__right work__right4">
-                <div class="img__box">
-                  <img
-                    src="src/assets/images/webstandard__03.png"
-                    alt="웹표준코딩사이트 이미지"
-                  />
-                </div>
-                <span>Web Standard <em>Site</em></span>
-                <p class="chosun">
-                  Next를 사용하여 만든 사이트입니다.<br />
-                  웹표준을 준수하여 코딩했습니다.
-                </p>
-              </a>
-            </div>
-          </div>
-        </section>
-        <main id="horizontality">
-          <section id="abilitySection1" class="section__item bg__white">
-            <div class="container">
-              <h3>By<em>ScriptCoding</em></h3>
-              <div class="ability__inner">
-                <span>Photoshop</span>
-                <span>illustrator</span>
-                <span>Figma</span>
-                <span>Html</span>
-                <span>CSS</span>
-                <span>SASS</span>
-                <span>Javascript</span>
-                <span>jQuery</span>
-                <span>React</span>
-                <span>Vue</span>
-                <span>Vite</span>
-                <span>Next</span>
+            <div class="right__side">
+              <div class="works__list">
+                <ul>
+                  <li>
+                    <strong>Works 1</strong><span>Make blog with PHP</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>Works 2</strong><span>Make Website with PHP</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>Works 3</strong><span>Make login with AJAX</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>Works 4</strong><span>Make blog with PHP</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>Works 5</strong><span>Make Website with PHP</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>Works 6</strong><span>Make login with AJAX</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>Works 7</strong><span>Make blog with PHP</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>Works 8</strong><span>Make blog with PHP</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>Works 9</strong><span>Make blog with PHP</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>Works 10</strong><span>Make blog with PHP</span>
+                    <div>
+                      <a href="#"><em>view </em>blog</a
+                      ><a href="#"><em>view </em>source</a>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-          </section>
-        </main>
-      </div>
+          </div>
+        </section>
+      </main>
     </main>
     <script type="module" src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
@@ -423,26 +506,87 @@
             });
           });
         },
-        onEnterBack: () => {
-          document.querySelector("#horizontality").style.display = "none";
-        },
-        onLeave: () => {
-          document.querySelector("#horizontality").style.display = "block";
-        },
+        // onEnterBack: () => {
+        //   document.querySelector("#horizontality").style.display = "none";
+        // },
+        // onLeave: () => {
+        //   document.querySelector("#horizontality").style.display = "flex";
+        // },
       });
 
       const horizon = document.querySelector("#horizontality");
+      const sections = gsap.utils.toArray("#horizontality > section");
 
-      gsap.to("#abilitySection1", {
+      gsap.to(sections, {
         ease: "none",
-        // x: "-500vw",
+        x: "-400vw",
         scrollTrigger: {
           trigger: "#horizontality",
           start: "top top",
-          end: "bottom bottom",
+          end: () => "+=" + (horizon.offsetWidth - innerWidth),
           pin: true,
           scrub: 1,
+          onUpdate: (self) => {
+            let progress = self.progress.toFixed(3);
+            console.log(progress);
+            if (progress > 0.5) {
+              document
+                .querySelector("#abilitySection2")
+                .classList.add("bg__black");
+              document
+                .querySelector("#abilitySection2")
+                .classList.remove("bg__white");
+              document.querySelector("#abilitySection2").style.color =
+                "#ffffff";
+              document.querySelector("#horizontality").style.backgroundColor =
+                "#000000";
+            } else if (progress < 0.5 && progress > 0) {
+              document
+                .querySelector("#abilitySection2")
+                .classList.add("bg__white");
+              document.querySelector("#abilitySection2").style.color =
+                "#000000";
+              document.querySelector("#horizontality").style.backgroundColor =
+                "#ffffff";
+            }
+          },
         },
+      });
+      let proxy = { skew: 0 },
+        skewSetter = gsap.quickSetter(abilitySpan, "skewX", "deg"), // fast
+        clamp = gsap.utils.clamp(-20, 20);
+      ScrollTrigger.create({
+        onUpdate: (self) => {
+          let skew = clamp(self.getVelocity() / -50);
+          if (Math.abs(skew) > Math.abs(proxy.skew)) {
+            proxy.skew = skew;
+            gsap.to(proxy, {
+              skew: 0,
+              duration: 0.5,
+              ease: "power1",
+              overwrite: true,
+              onUpdate: () => skewSetter(proxy.skew),
+            });
+          }
+        },
+      });
+
+      const workList = document.querySelector("#abilitySection3 .right__side");
+      gsap.defaults({ ease: "none", duration: 2 });
+      const portAni3 = gsap.timeline();
+      portAni3
+        .set(workList, { y: "100vh", opacity: 0.3 })
+        .to(workList, { y: 0, opacity: 1 });
+
+      ScrollTrigger.create({
+        animation: portAni3,
+        trigger: "#abilitySection3",
+        start: "top top",
+        end: "+=2000",
+        scrub: 1,
+        pin: true,
+        // anticipatePin: true,
+        markers: false,
       });
     </script>
   </body>
