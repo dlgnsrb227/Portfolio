@@ -316,7 +316,83 @@
           </div>
         </div>
       </section>
-      <section id="workSection2" class="section__item bg__white"></section>
+      <section id="workSection2" class="section__item bg__black">
+        <div class="backgorund__text">
+          <div class="text__inner">
+            <span
+              >ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·</span
+            >
+            <span class="textRight"
+              >ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·</span
+            >
+            <span
+              >ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·ByHoong·</span
+            >
+          </div>
+        </div>
+        <div class="background__image">
+          <img
+            class="image"
+            data-index="0"
+            data-status="inactive"
+            src="./assets/images/workBack__img01.png"
+          />
+          <img
+            class="image"
+            data-index="1"
+            data-status="inactive"
+            src="./assets/images/workBack__img02.png"
+          />
+          <img
+            class="image"
+            data-index="2"
+            data-status="inactive"
+            src="./assets/images/workBack__img03.png"
+          />
+          <img
+            class="image"
+            data-index="3"
+            data-status="inactive"
+            src="./assets/images/workBack__img04.png"
+          />
+          <img
+            class="image"
+            data-index="4"
+            data-status="inactive"
+            src="./assets/images/workBack__img05.png"
+          />
+          <img
+            class="image"
+            data-index="5"
+            data-status="inactive"
+            src="./assets/images/workBack__img06.png"
+          />
+          <img
+            class="image"
+            data-index="6"
+            data-status="inactive"
+            src="./assets/images/workBack__img07.png"
+          />
+          <img
+            class="image"
+            data-index="7"
+            data-status="inactive"
+            src="./assets/images/workBack__img08.png"
+          />
+          <img
+            class="image"
+            data-index="8"
+            data-status="inactive"
+            src="./assets/images/workBack__img09.png"
+          />
+          <img
+            class="image"
+            data-index="9"
+            data-status="inactive"
+            src="./assets/images/workBack__img10.png"
+          />
+        </div>
+      </section>
     </main>
     <script type="module" src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
@@ -597,7 +673,7 @@
         ease: "none",
         trigger: "#workSection1",
         start: "top top",
-        end: "+=2000",
+        end: "+=2500",
         pin: "#workSection1",
         anticipatePin: true,
         scrub: 1,
@@ -617,6 +693,42 @@
           document.querySelector("#header").style.transform = "translateY(0px)";
         },
       });
+
+      const images = document.getElementsByClassName("image");
+
+      let globalIndex = 0,
+        last = { x: 0, y: 0 };
+
+      const activate = (image, x, y) => {
+        image.style.left = `${x}px`;
+        image.style.top = `${y}px`;
+        image.style.zIndex = globalIndex;
+
+        image.dataset.status = "active";
+
+        last = { x, y };
+      };
+
+      const distanceFromLast = (x, y) => {
+        return Math.hypot(x - last.x, y - last.y);
+      };
+
+      const handleOnMove = (e) => {
+        if (distanceFromLast(e.clientX, e.clientY) > window.innerWidth / 20) {
+          const lead = images[globalIndex % images.length],
+            tail = images[(globalIndex - 5) % images.length];
+
+          activate(lead, e.clientX, e.clientY);
+
+          if (tail) tail.dataset.status = "inactive";
+
+          globalIndex++;
+        }
+      };
+
+      window.onmousemove = (e) => handleOnMove(e);
+
+      window.ontouchmove = (e) => handleOnMove(e.touches[0]);
     </script>
   </body>
 </html>
