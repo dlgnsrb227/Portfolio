@@ -8,14 +8,14 @@
 @import "./common/common";
 
 // layout
-@import "layout/header";
+@import "./layout/header";
 
 // section
-@import "section/introSection";
-@import "section/portSection";
-@import "section/abilitySection";
-@import "section/workSection";
-@import "section/contactSection";
+@import "./section/introSection";
+@import "./section/portSection";
+@import "./section/abilitySection";
+@import "./section/workSection";
+@import "./section/contactSection";
 
 // portpage
-@import "portpage/portPage";
+@import "./portpage/portPage";
