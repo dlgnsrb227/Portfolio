@@ -2,9 +2,20 @@
 
 // setting
 @import "./setting/fonts.scss";
+@import "./setting/base.scss";
 
 // common
 @import "./common/common";
 
 // layout
 @import "layout/header";
+
+// section
+@import "section/introSection";
+@import "section/portSection";
+@import "section/abilitySection";
+@import "section/workSection";
+@import "section/contactSection";
+
+// portpage
+@import "portpage/portPage";
