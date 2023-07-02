@@ -1,0 +1,95 @@
+#portpageSection1 {
+  color: #ffffff;
+  height: 50vh;
+  .container {
+    display: flex;
+    align-items: flex-end;
+    h3 {
+      width: 80vw;
+      margin: 0 auto;
+      padding-bottom: 5.5vw;
+      border-bottom: 1px solid #ffffff;
+      font-size: 6.5vw;
+    }
+  }
+}
+
+#portpageSection2 {
+  width: 400vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #ffffff;
+  .portpage__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0 10vw;
+    height: 70vh;
+
+    span {
+      font-size: 1.6vw;
+      font-weight: 300;
+      color: #cccccc;
+    }
+
+    .portpage__image {
+      margin-left: 2vw;
+      transition: all 0.3s;
+      opacity: 0.7;
+      filter: blur(5px);
+
+      .image__inner {
+        overflow: hidden;
+        border-radius: 5px;
+
+        img {
+          transition: all 0.6s;
+        }
+      }
+      p {
+        margin: 1vw 0 0.5vw 0;
+        font-size: 2vw;
+      }
+      a {
+        margin-right: 0.5vw;
+        color: #aaaaaa;
+      }
+
+      &.active {
+        opacity: 1;
+        filter: none;
+        img {
+          transform: scale(1.07);
+        }
+      }
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .back__image {
+      margin-left: 10vw;
+      position: relative;
+
+      img {
+        &:nth-child(1) {
+          animation: rotation 20s linear infinite;
+        }
+        &:nth-child(2) {
+          width: 4vw;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
+        }
+      }
+    }
+  }
+}

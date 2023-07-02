@@ -1,0 +1,83 @@
+#horizontality {
+  margin-top: -100vh;
+  opacity: 0;
+  background-color: #000;
+  width: 500vw;
+  display: flex;
+  font-family: "PP Mori";
+  flex-wrap: nowrap;
+  #abilitySection1 {
+    width: 100vw;
+    position: relative;
+    .container {
+      h3 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 3px;
+        font-weight: 100;
+        font-size: 5vw;
+        em {
+          letter-spacing: 0;
+          font-weight: 900;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  #abilitySection2 {
+    width: 300vw;
+    padding-right: 10vw;
+    transition: color, background 0.8s;
+    .ability__inner {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: space-between;
+      .subject {
+        font-weight: 100;
+        em {
+          font-style: italic;
+          font-weight: 400;
+        }
+      }
+      span {
+        display: inline-block;
+        font-size: 6vw;
+        font-weight: 300;
+        text-shadow: 0 0 1px #000000;
+      }
+    }
+  }
+  #abilitySection3 {
+    width: 100vw;
+    color: #ffffff;
+    .container {
+      display: flex;
+      .left__side {
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 6vw;
+          position: relative;
+          color: #000000;
+          text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff,
+            -1px 1px 0 #ffffff, 4px 4px 0px #ffffff;
+          em {
+            color: #ffffff;
+            text-shadow: none;
+            font-size: 1.5vw;
+            font-weight: 300;
+            font-style: italic;
+            position: absolute;
+            left: -10px;
+            top: -12px;
+          }
+        }
+      }
+    }
+  }
+}
