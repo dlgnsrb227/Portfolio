@@ -81,14 +81,14 @@
     }
     .spin__text {
       position: absolute;
-      left: 31%;
+      left: 30vw;
       top: 45.5%;
 
       span {
         position: absolute;
-        width: 20vw;
+        width: 50vw;
         display: inline-block;
-        font-size: 1.35vw;
+        font-size: 1.6vw;
         font-weight: 300;
         color: #aaa;
         display: none;
@@ -98,21 +98,22 @@
 
         em {
           color: #fff;
-          font-size: 1.4vw;
+          font-size: 1.6vw;
         }
       }
       span:nth-child(5) {
         display: block;
-        font-size: 0.85vw;
-        padding: 2.5vw 0.3vw;
+        font-size: 1vw;
+        padding: 4vw 6px;
         color: #aaa;
         transform: translateX(2vw);
         opacity: 0;
         transition: all 0.3s;
         font-weight: 500;
+        word-break: keep-all;
         em {
           color: #fff;
-          font-size: 0.9vw;
+          font-size: 1vw;
         }
         &.active {
           transform: translateX(0);
@@ -137,6 +138,58 @@
         object-fit: cover;
         -webkit-mask-size: cover;
         mask-size: cover;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  #introSection2 {
+    .container {
+      transform: scale(0.7);
+      .spin__stick {
+      }
+      .spin__text {
+        left: 15vw;
+        span {
+          font-size: 2vw;
+          em {
+            font-size: 2vw;
+          }
+        }
+        span:nth-child(5) {
+          font-size: 1.4vw;
+          em {
+            font-size: 1.4vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  #introSection2 {
+    .container {
+      transform: scale(0.5);
+
+      .spin__stick {
+        transform: scale(1);
+      }
+      .spin__text {
+        left: -35vw;
+        span {
+          font-size: 6vw;
+          width: 100vw;
+          em {
+            font-size: 6vw;
+          }
+        }
+        span:nth-child(5) {
+          font-size: 3.5vw;
+          padding-top: 12vw;
+          em {
+            font-size: 3.5vw;
+          }
+        }
       }
     }
   }
