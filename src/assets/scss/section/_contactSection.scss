@@ -60,3 +60,43 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  #contactSection1 {
+    .container {
+      .contact__box {
+        height: 60%;
+        span {
+          font-size: 4vw;
+        }
+        h4 {
+          font-size: 11vw;
+          letter-spacing: -0.5vw;
+        }
+      }
+      .contact__foot {
+        height: 40%;
+        display: block;
+        text-align: center;
+        .foot__inner {
+          span {
+            font-size: 2.5vw;
+            &:nth-child(1) {
+              font-size: 3vw;
+            }
+          }
+          a {
+            font-size: 2.5vw;
+            &.backtop {
+            }
+          }
+
+          &.social {
+            a {
+            }
+          }
+        }
+      }
+    }
+  }
+}
