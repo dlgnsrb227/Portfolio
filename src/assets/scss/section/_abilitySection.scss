@@ -35,13 +35,13 @@
       height: 100vh;
       align-items: center;
       justify-content: space-between;
-      .subject {
-        font-weight: 100;
-        em {
-          font-style: italic;
-          font-weight: 400;
-        }
-      }
+      // .subject {
+      //   font-weight: 100;
+      //   em {
+      //     font-style: italic;
+      //     font-weight: 400;
+      //   }
+      // }
       span {
         display: inline-block;
         font-size: 6vw;
@@ -75,6 +75,43 @@
             position: absolute;
             left: -10px;
             top: -12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #horizontality {
+    #abilitySection1 {
+      .container {
+        h3 {
+          font-size: 8vw;
+          em {
+          }
+        }
+      }
+    }
+    #abilitySection2 {
+      .ability__inner {
+        span {
+        }
+      }
+    }
+    #abilitySection3 {
+      .container {
+        .left__side {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          span {
+            font-size: 8vw;
+            text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff,
+              -1px 1px 0 #ffffff, 2px 2px 0px #ffffff;
+            em {
+              font-size: 3vw;
+            }
           }
         }
       }
