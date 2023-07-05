@@ -5,7 +5,7 @@ function checkScreenSize() {
   }
 }
 
-window.addEventListener("resize", checkScreenSize);
+// window.addEventListener("resize", checkScreenSize);
 
 import "./src/assets/scss/style.scss";
 import "./src/script/introSection.js";
