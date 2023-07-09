@@ -40,7 +40,7 @@ ScrollTrigger.matchMedia({
 });
 
 ScrollTrigger.matchMedia({
-  "(max-width: 500px)": function () {
+  "(max-width: 499px)": function () {
     workAni1
       .set(workRight, { y: "80vh", opacity: "0.8" })
       .to(workRight, { y: "-100vh", opacity: "1" });
